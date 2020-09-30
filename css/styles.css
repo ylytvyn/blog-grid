@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap');
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+/* Main Styles */
+
+
+body{
+	background: #E1E6EB;
+	font: 13px 'Baloo Tammudu 2', cursive;
+	color: #1d1d1d;
+}
+
+/* Layout */
+.container {
+	padding: 50px 15px 70px;
+	width: 100%;
+	max-width: 1150px; /*1120*/
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.post {
+	flex-basis: 340px;
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column wrap;
+	margin: 0 10px 20px;
+	transition: all .3s;
+}
+
+.post:first-child {
+	flex-basis: 715px;
+	position: relative;
+}
+
+.post:hover {
+	transform: scale(1.02);
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .4);
+}
+
+.post__link {
+	overflow: hidden;
+}
+
+.post__link img {
+	display: block;
+	width: 100%;
+	transition: all 1s;
+}
+
+.post:hover .post__link img {
+	transform: scale(1.07) rotate(1deg);
+}
+
+.post__body {
+	background: #FFF;
+	padding: 20px 25px;
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.post:first-child .post__body {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(to bottom, transparent, #000);
+	color: #FFF;
+	display: flex;
+	justify-content: flex-end;
+}
+ 
+.post__date {
+	color: #818181;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.post__title {
+	font-size: 22px;
+	line-height: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	flex-grow: 1;
+	margin-bottom: 20px;
+}
+
+.post:first-child .post__title {
+	flex-grow: 0;
+	font-size: 30px;
+	line-height: 35px;
+	margin-bottom: 0;
+}
+
+.post__author {
+	text-decoration: none;
+	display: block;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.post__author img {
+	width: 100%;
+	min-height: 100%;
+}
+
+.preloader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.preloader span {
+	color: #99a5b0;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	position: relative;
+	top: 6px;
+	margin-left: 10px;
+}
